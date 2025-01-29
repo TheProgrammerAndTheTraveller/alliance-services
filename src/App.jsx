@@ -1,32 +1,39 @@
-import './App.css'
-import { Suspense, lazy } from 'react'
-import reactLogo from './assets/react.svg'
-
-// Works also with SSR as expected
-const Card = lazy(() => import('./Card'))
+import './App.css';
+import ColorSchemesExample from './Navbar';
+import FlipCard from './FlipCard';
 
 function App() {
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <ColorSchemesExample />
+      <div style={{ display: "flex", gap: "20px", justifyContent: "center", flexWrap: "wrap", padding: "20px" }}>
+        <FlipCard
+          src="/images/de88051c-b410-44c1-a288-66946b2a3df3.png"
+          alt="Network Installation"
+          title="Монтаж СКС и ВОЛС"
+          description="Качественная установка СКС и ВОЛС"
+        />
+        <FlipCard
+          src="/images/de88051c-b410-44c1-a288-66946b2a3df3.png"
+          alt="Wireless Networks"
+          title="Монтаж беспроводных сетей"
+          description="Настройка беспроводных сетей"
+        />
+        <FlipCard
+          src="/images/de88051c-b410-44c1-a288-66946b2a3df3.png"
+          alt="CCTV Installation"
+          title="Установка видеонаблюдения"
+          description="Монтаж и настройка камер"
+        />
+        <FlipCard
+          src="/images/de88051c-b410-44c1-a288-66946b2a3df3.png"
+          alt="Business Solutions"
+          title="Бизнес решения"
+          description="Технологические решения для бизнеса"
+        />
       </div>
-      <h1>Vite + React</h1>
-
-      <Suspense fallback={<p>Loading card component...</p>}>
-        <Card />
-      </Suspense>
-
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
