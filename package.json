@@ -4,22 +4,27 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "node server",
+    "dev": "react-router dev",
     "build": "npm run build:client && npm run build:server",
     "build:client": "vite build --outDir dist/client",
     "build:server": "vite build --ssr src/entry-server.jsx --outDir dist/server",
     "preview": "cross-env NODE_ENV=production node server"
   },
   "dependencies": {
+    "@react-router/node": "^7.1.5",
     "bootstrap": "^5.3.3",
     "compression": "^1.7.5",
     "express": "^5.0.1",
+    "isbot": "^5",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.8",
     "react-dom": "^18.3.1",
+    "react-router-dom": "^7.1.5",
+    "sass": "^1.83.4",
     "sirv": "^3.0.0"
   },
   "devDependencies": {
+    "@react-router/dev": "^7.1.5",
     "@vitejs/plugin-react": "^4.3.4",
     "cross-env": "^7.0.3",
     "vite": "^6.0.1"
