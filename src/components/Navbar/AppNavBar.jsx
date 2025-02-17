@@ -1,25 +1,34 @@
 import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Button from 'react-bootstrap/Button';
-import { NavLink } from 'react-router-dom';
+import Link from 'next/link';
+import { Nav, NavbarBrand, NavbarCollapse, NavLink, NavbarToggle, Row, Col } from 'react-bootstrap';
+// import NavbarToggle from 'react-bootstrap';
 
 function AppNavBar() {
     return (
         <>
-            <Navbar bg="dark" data-bs-theme="dark">
+            <Navbar bg="dark" data-bs-theme="dark" expand="lg" sticky="top">
                 <Container>
-                    <Navbar.Brand as={NavLink} to="/">StreamNet</Navbar.Brand>
-                    <Nav className="me-auto">
-                        <Nav.Link as={NavLink} to="/Vols">Монтаж СКС и ВОЛС</Nav.Link>
-                        <Nav.Link href="#Wifi">Монтаж беспроводных сетей</Nav.Link>
-                        <Nav.Link href="#VSS">Установка видеонаблюдения</Nav.Link>
-                        <Nav.Link href="#Business">Бизнес решения для организаций</Nav.Link>
-                        <Nav.Link href="#Business">О нас</Nav.Link>
-                    </Nav>
-                    <Button style={{ backgroundColor: '#800080', borderColor: '#800080' }}>
-                        Submit
-                    </Button>
+                    <NavbarBrand as={Link} href="/">StreamNet</NavbarBrand>
+
+                    <div className="d-flex ms-auto align-items-center">
+                        <NavbarToggle aria-controls="basic-navbar-nav" className="me-3" />
+                    </div>
+
+                    <NavbarCollapse id="basic-navbar-nav">
+                        <Nav className="ms-auto">
+                            <NavLink as={Link} href="/vols">Монтаж СКС и ВОЛС</NavLink>
+                            <NavLink as={Link} href="/wifi">Монтаж беспроводных сетей</NavLink>
+                            <NavLink as={Link} href="/vss">Установка видеонаблюдения</NavLink>
+                            <NavLink as={Link} href="/business">Бизнес решения для организаций</NavLink>
+                            <NavLink as={Link} href="/about">О нас</NavLink>
+                        </Nav>
+                        <Button as={Link} href="/contact" variant="theme-pink" className="rounded-pill ms-xl-2 mt-xl-0 mt-1">
+                            Связаться
+                        </Button>
+                    </NavbarCollapse>
+
                 </Container>
             </Navbar>
         </>

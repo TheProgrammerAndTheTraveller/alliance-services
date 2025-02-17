@@ -1,0 +1,35 @@
+.vols-hero {
+    background: linear-gradient(to bottom, #000000, #000723, #1B3BF1); // Изменен градиент, добавлен черный цвет
+
+    @include media-breakpoint-down(xl) {
+        &__text-container {
+            height: 530px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &__title {
+        font-weight: 700; // Жирный текст
+        font-size: "84px"; // Размер шрифта
+        line-height: "88px"; // Высота строки
+    }
+
+    &__subtitle{
+        font-weight: 400; // Нормальный вес текста
+        font-size: 21px; // Размер шрифта
+        line-height: 33px; // Высота строки
+    }
+
+    &__image {
+        align-self: stretch;
+
+        & > img {
+            width: 100%;
+            object-fit: cover;
+            height: 100%;
+        }
+    }
+}

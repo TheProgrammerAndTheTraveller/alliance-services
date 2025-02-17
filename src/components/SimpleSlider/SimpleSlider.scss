@@ -1,0 +1,38 @@
+$blueCard:#1b3bf1;
+$blackCard:#000723;
+
+.slider-card{
+  border-radius: 16px;
+  color: white;
+  padding: 2.6rem;
+  align-self: stretch;
+  height: unset!important;
+  text-align: center;
+  display: flex;
+  background-color: $blackCard;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  &__author{
+    font-weight: bold;
+  }
+
+  &-blue {
+    background-color: $blueCard;
+  }
+}
+
+.cardslider-container{
+  --swiper-pagination-bottom: 10px;
+  --swiper-pagination-bullet-size: 13px;
+  --swiper-pagination-bullet-horizontal-gap: 20px;
+  --swiper-pagination-bullet-active-color: $blueCard;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-inactive-color: #000723;
+
+  padding: 20px 0 0 0;
+  .swiper-wrapper {
+    margin-bottom: 40px;
+  }
+}
