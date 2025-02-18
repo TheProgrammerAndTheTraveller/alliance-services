@@ -8,7 +8,7 @@ import { Nav, NavbarBrand, NavbarCollapse, NavLink, NavbarToggle, Row, Col } fro
 function AppNavBar() {
     return (
         <>
-            <Navbar bg="dark" data-bs-theme="dark" expand="lg" sticky="top">
+            <Navbar collapseonselect bg="dark" data-bs-theme="dark" expand="lg" sticky="top">
                 <Container>
                     <NavbarBrand as={Link} href="/">StreamNet</NavbarBrand>
 
