@@ -37,7 +37,7 @@ const ContactCard = () => {
                     <i className="bi bi-geo-alt-fill text-primary me-2"></i>
                     <strong>Адрес</strong>
                     <p className="mb-0">Республика Казахстан, город Алматы</p>
-                    <p className="mb-0">Микрорайон Калкаман</p>
+                    <p className="mb-0">Микрорайон Калкаман 2</p>
                     <p className="mb-0">улица Мусабаева 9/1</p>
                     
                 </div>
