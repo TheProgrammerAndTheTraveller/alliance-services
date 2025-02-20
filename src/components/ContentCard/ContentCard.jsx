@@ -17,6 +17,9 @@ const ContactCard = () => {
                     <strong>Номер телефона</strong>
                     <p className="mb-0">
                         <a href="tel:+7 701 726 9303" className="text-decoration-none text-dark">+7 701 726 9303</a>
+                        </p>
+                        <p className="mb-0">
+                        <a href="tel:+7 700 777 0689" className="text-decoration-none text-dark">+7 700 777 0689</a>
                     </p>
                 </div>
 
