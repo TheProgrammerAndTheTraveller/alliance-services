@@ -17,7 +17,7 @@ function Cards({ cards }) {
                                 <CardText>{card.description}</CardText>
                                 <Link href={card.path} passHref>
                                 <Button variant='theme-pink' className='rounded-pill'>
-                                    Связаться
+                                    Подробнее
                                 </Button>
                                 </Link>
                             </CardBody>
