@@ -1,0 +1,28 @@
+
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/variables-dark";
+@import "../../../node_modules/bootstrap/scss/maps";
+@import "../../../node_modules/bootstrap/scss/mixins";
+
+
+@include media-breakpoint-down(xl) {
+    .navbar-nav {
+        --bs-nav-link-font-size: 0.75rem;
+    }
+
+    .nav-link {
+        --bs-navbar-nav-link-padding-x: 0.15rem;
+    }
+
+    .navbar {
+        .container {
+            max-width: 1024px;
+        }
+    }
+}
+
+.nav-link {
+    --bs-nav-link-padding-x: 0.1rem;
+    --bs-navbar-nav-link-padding-x: 0.25rem;
+}

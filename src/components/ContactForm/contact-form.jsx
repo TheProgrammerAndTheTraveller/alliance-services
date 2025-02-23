@@ -76,7 +76,7 @@ export default function ContactForm() {
                 ref={recaptchaRef}
             />
 
-            <Button type="submit" variant="theme-pink" className="rounded-pill mt-3">
+            <Button type="submit" variant="theme-pink" className="rounded-pill my-2">
                 Заказать услугу
             </Button>
         </Form>
