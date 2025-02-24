@@ -38,7 +38,7 @@ function AppNavBar() {
                                     <DropdownItem href='tel:+77007770689'>+7 700 777 0689</DropdownItem>
                                 </DropdownMenu>
                             </Dropdown>
-                            <Link style={{ fontSize: '1.5rem' }} className='m-2 text-muted' href="mailto:support@streamnet.kz"><i className='bi bi-envelope-fill'></i></Link>
+                            <Link style={{ fontSize: '1.5rem' }} className='m-2 text-muted' href="mailto:info@streamnet.kz"><i className='bi bi-envelope-fill'></i></Link>
                             <div className="vr bg-light mx-1 d-none d-md-block"></div>
                         </div>
                     </NavbarCollapse>
