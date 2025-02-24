@@ -14,8 +14,12 @@ const Footer = () => {
                 <Row>
 
                     <Col md="4" className="offset-md-2">
-                        <h4 className="fw-bold">StreamNet</h4>
+                        <h4 className="fw-bold">ТОО "StreamNet"</h4>
                         <p>Надежная связь для вашего бизнеса</p>
+                        <address >
+                            Республика Казахстан, Алматы<br />
+                            Мусабаева 9/1
+                        </address>
                     </Col>
 
 
