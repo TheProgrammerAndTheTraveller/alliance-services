@@ -1,43 +1,46 @@
-import { Image } from "react-bootstrap";
+import { Image as BsImage } from "react-bootstrap";
+import Image from 'next/image'
 import Cards from "../components/Cards/Cards";
 import SimpleSlider from "../components/SimpleSlider/SimpleSlider";
+import mainPic from '../../public/images/Alm.png'
+import cardPic from "../../public/images/de88051c-b410-44c1-a288-66946b2a3df3.png"
 
 function Home() {
     const cardsData = [
         {
-            src: "/images/de88051c-b410-44c1-a288-66946b2a3df3.png",
+            src: cardPic,
             title: "Монтаж СКС и ВОЛС",
             description: "Качественная установка СКС и ВОЛС",
             path: "/vols"
 
         },
         {
-            src: "/images/de88051c-b410-44c1-a288-66946b2a3df3.png",
+            src: cardPic,
             title: "Монтаж беспроводных сетей",
             description: "Настройка беспроводных сетей",
             path: "/wifi"
 
         },
         {
-            src: "/images/de88051c-b410-44c1-a288-66946b2a3df3.png",
+           src: cardPic,
             title: "Установка видеонаблюдения",
             description: "Монтаж и настройка камер",
             path: "/vss"
 
         },
         {
-            src: "/images/de88051c-b410-44c1-a288-66946b2a3df3.png",
+            src: cardPic,
             title: "Бизнес решения",
             description: "Технологические решения для бизнеса",
             path: "/business"
-
         }
     ];
 
     return (
         <>
             <Image
-                src="images/Alm.png"
+                as={BsImage}
+                src={mainPic}
                 fluid
                 style={{ width: "100%", maxHeight: "772px", minHeight: "400px", objectFit: "cover", objectPosition: "center" }} className="mb-5" />
             <Cards cards={cardsData} />

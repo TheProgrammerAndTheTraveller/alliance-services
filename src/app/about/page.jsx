@@ -1,8 +1,9 @@
-import { Container, Row, Col, Button, Image } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import { Poppins } from 'next/font/google';
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
-
+import Image from 'next/image'
+import cardImage from "../../../public/images/7c7537c1-2367-4f90-bfb1-a6d10155ebfd.png"
 import Link from 'next/link';
 
 const poppins = Poppins({
@@ -29,7 +30,7 @@ function About() {
                     {/* Картинка */}
                     <Col md className="vols-hero__image p-0 d-none d-xl-block">
                         <Image
-                            src="/images/7c7537c1-2367-4f90-bfb1-a6d10155ebfd.png"
+                            src={cardImage}
                             alt="Бизнес решения"
                         />
                     </Col>
@@ -74,9 +75,10 @@ function About() {
                         </Button>
                     </Col>
 
-                    {/* Блок с изображением */}                     <Col className="ps-xl-0 pe-xl-2 offset-xl-1 py-xl-0 p-3">
+                    {/* Блок с изображением */}                    
+                    <Col className="ps-xl-0 pe-xl-2 offset-xl-1 py-xl-0 p-3">
                         <Image
-                            src="/images/7c7537c1-2367-4f90-bfb1-a6d10155ebfd.png"
+                            src={cardImage}
                             alt="Монтаж СКС и ВОЛС"
                             fluid={false} // Здесь мы не растягиваем изображение
                             style={{
