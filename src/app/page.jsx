@@ -41,7 +41,6 @@ function Home() {
             <Image
                 as={BsImage}
                 src={mainPic}
-                fluid
                 style={{ width: "100%", maxHeight: "772px", minHeight: "400px", objectFit: "cover", objectPosition: "center" }} />
             <BrandSlider></BrandSlider>
             <Cards cards={cardsData} />

@@ -3,7 +3,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, FreeMode } from "swiper/modules";
 import Image from "next/image";
-import React, { useRef, useState } from 'react';
+import React from 'react';
 // Import Swiper React components
 
 // Import Swiper styles
@@ -11,57 +11,64 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import "./BrandSlider.scss";
-import { EffectCoverflow, Pagination } from 'swiper/modules';
+
+import vsolLogo from "../../../public/images/vsollogo.webp"
+import comfastLogo from "../../../public/images/Comfast-Logo-1.jpg"
+import comwayLogo from "../../../public/images/comway-logo.png"
+import big from "../../../public/images/big-188383-1.png"
+import dptekLogo from "../../../public/images/dptek_logo.png"
+import ok from "../../../public/images/ok.png"
+import ok2 from "../../../public/images/ok2.png"
 
 
+const images = [
+    {img: vsolLogo, alt:"vsolLogo"},
+    {img: comfastLogo, alt:"comfastLogo"},
+    {img: comwayLogo, alt:"comwayLogo"},
+    {img: big, alt:"big"},
+    {img: dptekLogo, alt:"dptekLogo"},
+    {img: ok, alt:"ok"},
+    {img: ok2, alt:"ok2"},
+]
 
 const BrandSlider = () => {
     return (
         <>
             <Swiper
-                // effect={'coverflow'}
                 grabCursor={true}
                 centeredSlides={false}
-                slidesPerView={'auto'}
                 loop={true}
                 freeMode={true}
                 autoplay={{
                     delay: 0,
+                    disableOnInteraction: false
                 }}
+                breakpoints={{
+                    640: {
+                      slidesPerView: 3,
+                      spaceBetween: 20,
+                    },
+                    768: {
+                      slidesPerView: 4,
+                      spaceBetween: 40,
+                    },
+                    1024: {
+                      slidesPerView: 6,
+                      spaceBetween: 50,
+                    },
+                  }}
                 speed={3000}
-
-                // coverflowEffect={{
-                //     rotate: 50,
-                //     stretch: 0,
-                //     depth: 100,
-                //     modifier: 1,
-                //     slideShadows: true,
-                // }}
-                pagination={false}
-                modules={[EffectCoverflow, Pagination, Autoplay, FreeMode]}
+                modules={[Autoplay, FreeMode]}
                 className="mySwiper"
             >
-                <SwiperSlide>
-                    <img src="/images/vsollogo.webp" alt="Brand Logo" />
+                {images.map((image, i) => 
+                <SwiperSlide key={i}>
+                    <Image 
+                        src={image.img}
+                        alt={image.alt} 
+                        />
                 </SwiperSlide>
-                <SwiperSlide>
-                    <img src="/images/Comfast-Logo-1.jpg" alt="Brand Logo" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src="/images/comway-logo.png" alt="Brand Logo" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src="/images/big-188383-1.png" alt="Brand Logo" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src="/images/dptek_logo.png" alt="Brand Logo" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src="/images/ok.png" alt="Brand Logo" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src="/images/ok2.png" alt="Brand Logo" />
-                </SwiperSlide>
+                )}
             </Swiper>
         </>
     );
