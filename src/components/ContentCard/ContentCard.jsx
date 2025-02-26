@@ -7,16 +7,15 @@ const ContactCard = () => {
             <CardBody>
                 <h4 className="fw-bold mb-3">Контакты</h4>
 
-               
-
-            
-               
                 {/* US Number */}
                 <div className="mb-3">
                     <i className="bi bi-telephone-inbound-fill text-primary me-2"></i>
                     <strong>Номер телефона</strong>
                     <p className="mb-0">
                         <a href="tel:+7 701 726 9303" className="text-decoration-none text-dark">+7 701 726 9303</a>
+                    </p>
+                    <p className="mb-0">
+                        <a href="tel:+7 700 777 0689" className="text-decoration-none text-dark">+7 700 777 0689</a>
                     </p>
                 </div>
 
@@ -34,9 +33,9 @@ const ContactCard = () => {
                     <i className="bi bi-geo-alt-fill text-primary me-2"></i>
                     <strong>Адрес</strong>
                     <p className="mb-0">Республика Казахстан, город Алматы</p>
-                    <p className="mb-0">Микрорайон Калкаман</p>
+                    <p className="mb-0">Микрорайон Калкаман 2</p>
                     <p className="mb-0">улица Мусабаева 9/1</p>
-                    
+
                 </div>
 
                 {/* Social Links */}
