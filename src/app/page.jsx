@@ -5,6 +5,7 @@ import SimpleSlider from "../components/SimpleSlider/SimpleSlider";
 import mainPic from '../../public/images/Alm.png'
 import cardPic from "../../public/images/de88051c-b410-44c1-a288-66946b2a3df3.png"
 import BrandSlider from "../components/BrandSlider/BrandSlider";
+
 function Home() {
     const cardsData = [
         {
