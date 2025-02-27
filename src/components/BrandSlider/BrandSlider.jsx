@@ -35,7 +35,7 @@ const BrandSlider = () => {
     return (
         <>
             <Swiper
-                grabCursor={true}
+                grabCursor={false}
                 centeredSlides={false}
                 loop={true}
                 freeMode={true}
