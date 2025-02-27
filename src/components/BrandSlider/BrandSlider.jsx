@@ -12,8 +12,8 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import "./BrandSlider.scss";
 
-import vsolLogo from "../../../public/images/vsollogo.webp"
-import comfastLogo from "../../../public/images/Comfast-Logo-1.jpg"
+import vsolLogo from "../../../public/images/vsollogo.png"
+import comfastLogo from "../../../public/images/Comfast-Logo-1.png"
 import comwayLogo from "../../../public/images/comway-logo.png"
 import big from "../../../public/images/big-188383-1.png"
 import dptekLogo from "../../../public/images/dptek_logo.png"
@@ -44,7 +44,7 @@ const BrandSlider = () => {
                     disableOnInteraction: false
                 }}
                 breakpoints={{
-                    640: {
+                    320: {
                       slidesPerView: 3,
                       spaceBetween: 20,
                     },

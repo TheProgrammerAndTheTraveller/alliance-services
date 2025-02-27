@@ -41,7 +41,11 @@ function Home() {
             <Image
                 as={BsImage}
                 src={mainPic}
-                style={{ width: "100%", maxHeight: "772px", minHeight: "400px", objectFit: "cover", objectPosition: "center" }} />
+                style={{ width: "100%", maxHeight: "772px", minHeight: "400px", objectFit: "cover", objectPosition: "center" }}
+                placeholder="blur"
+                priority 
+                alt="MainPic"
+                />
             <BrandSlider></BrandSlider>
             <Cards cards={cardsData} />
             <SimpleSlider></SimpleSlider>
