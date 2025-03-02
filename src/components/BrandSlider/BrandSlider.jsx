@@ -15,20 +15,20 @@ import "./BrandSlider.scss";
 import vsolLogo from "../../../public/images/vsollogo.png"
 import comfastLogo from "../../../public/images/Comfast-Logo-1.png"
 import comwayLogo from "../../../public/images/comway-logo.png"
-import big from "../../../public/images/big-188383-1.png"
 import dptekLogo from "../../../public/images/dptek_logo.png"
 import ok from "../../../public/images/ok.png"
 import ok2 from "../../../public/images/ok2.png"
+import altaoyok from "../../../public/images/altayok.png"
 
 
 const images = [
-    {img: vsolLogo, alt:"vsolLogo"},
-    {img: comfastLogo, alt:"comfastLogo"},
-    {img: comwayLogo, alt:"comwayLogo"},
-    {img: big, alt:"big"},
-    {img: dptekLogo, alt:"dptekLogo"},
-    {img: ok, alt:"ok"},
-    {img: ok2, alt:"ok2"},
+    {img: vsolLogo, alt:"V-SOL"},
+    {img: comfastLogo, alt:"Comfast"},
+    {img: comwayLogo, alt:"Comway"},
+    {img: dptekLogo, alt:"DPTek"},
+    {img: ok, alt:"Okent"},
+    {img: ok2, alt:"Oknet"},
+    {img: altaoyok, alt:"АлтайОптикаКабель"},
 ]
 
 const BrandSlider = () => {
@@ -65,7 +65,8 @@ const BrandSlider = () => {
                 <SwiperSlide key={i}>
                     <Image 
                         src={image.img}
-                        alt={image.alt} 
+                        alt={image.alt}
+                        sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 16vw"
                         />
                 </SwiperSlide>
                 )}

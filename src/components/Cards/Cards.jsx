@@ -11,7 +11,13 @@ function Cards({ cards }) {
                 {cards.map((card, idx) => (
                     <Col lg={3} md={6} xs={12} key={idx}> {/* Перенес key сюда */}
                         <Card className='services-card'>
-                            <CardImg as={Image} variant="top" src={card.src} height={383} width={399} />
+                            <CardImg 
+                                as={Image} 
+                                variant="top"
+                                 src={card.src}
+                                 width={786}
+                                 height={304}
+                                 sizes="786px"/>
                             <CardBody className="text-center">
                                 <CardTitle>{card.title}</CardTitle>
                                 <CardText>{card.description}</CardText>
