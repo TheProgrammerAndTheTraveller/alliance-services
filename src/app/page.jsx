@@ -4,6 +4,7 @@ import Cards from "../components/Cards/Cards";
 import SimpleSlider from "../components/SimpleSlider/SimpleSlider";
 import mainPic from '../../public/images/Alm.png'
 import cardPic from "../../public/images/de88051c-b410-44c1-a288-66946b2a3df3.png"
+import BrandSlider from "../components/BrandSlider/BrandSlider";
 
 function Home() {
     const cardsData = [
@@ -12,7 +13,6 @@ function Home() {
             title: "Монтаж СКС и ВОЛС",
             description: "Качественная установка СКС и ВОЛС",
             path: "/vols"
-
         },
         {
             src: cardPic,
@@ -22,7 +22,7 @@ function Home() {
 
         },
         {
-           src: cardPic,
+            src: cardPic,
             title: "Установка видеонаблюдения",
             description: "Монтаж и настройка камер",
             path: "/vss"
@@ -41,8 +41,12 @@ function Home() {
             <Image
                 as={BsImage}
                 src={mainPic}
-                fluid
-                style={{ width: "100%", maxHeight: "772px", minHeight: "400px", objectFit: "cover", objectPosition: "center" }} className="mb-5" />
+                style={{ width: "100%", maxHeight: "772px", minHeight: "400px", objectFit: "cover", objectPosition: "center" }}
+                placeholder="blur"
+                priority 
+                alt="MainPic"
+                />
+            <BrandSlider></BrandSlider>
             <Cards cards={cardsData} />
             <SimpleSlider></SimpleSlider>
         </>

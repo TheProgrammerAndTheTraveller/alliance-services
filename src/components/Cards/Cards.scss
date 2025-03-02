@@ -5,4 +5,8 @@
         flex-direction: column;
         justify-content: space-between;
     }
+
+    img {
+        object-fit: contain;
+    }
 }
